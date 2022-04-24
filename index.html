@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <title>jquery example</title>
+
+
+
+    <script src="/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var count = 0;
+            var count1 = 0;
+            var bordercount = 0;
+            $("#show").click(function () {
+                $(".sec p").css("color", "green");
+                $(".sec p").show();
+
+
+            });
+
+            $("#hide").click(function () {
+                $(".sec p").hide();
+            });
+
+            $("#border").click(function () {
+                $("#border").hide();
+
+            });
+
+            $("#show").click(function () {
+                $(".sec p").css("color", "green");
+                $(".sec p").show();
+
+            });
+
+            $("img").hover(function () {
+                $("img").css("opacity", "0.8");
+                $("img").css("width", "380px");
+
+            },
+                function () {
+                    $("img").css("opacity", "1");
+                    $("img").css("width", "auto");
+
+                });
+            /////////////////////////////////////
+
+            //         .pragraph p{
+            // border:  solid 3px #00ffe1;
+            // padding: 10px 10px;
+
+
+            $(document).ready(function () {
+
+                $("#border-1").click(function () {
+                    bordercount++;
+                    // border: 3px solid var(--primary-color);
+                    if (bordercount % 2 == 1) {
+
+                        $("img").css("border", "solid 5px red");
+                        $("img").css("width", "380px");
+                    }
+
+                    if(bordercount%2 ==0){
+                        $("img").css("border", "solid 3px #00ffe1");
+                        $("img").css("width", "50vw");
+                    }
+                    // $(".par-2").css("margin", "30px 0px 0px 00px");
+                    // // $(".par-1").write("Its me sanish!!!");
+                    // $(".par-1").css("border", "solid 3px red");
+                    // $(".par-1").hide();
+                    // $(".par-1").write("Its me sanish!!!");
+                    ///////////////
+                    // $(".par-2").hide();
+                    // $(".par-2").css("margin","100px 0px 0px 900px");
+                })
+
+                $("#pragraph-button-2").click(function () {
+                    count++;
+                    // alert(count);
+                    if (count % 2 == 1) {
+                        $(".par-2").css("margin", "30px 0px 50px 00px");
+                        // $(".par-1").write("Its me sanish!!!");
+                        $(".par-2").css("border", "solid 3px red");
+                        $(".par-1").hide();
+                        $(".par-1").write("Its me sanish!!!");
+
+                    }
+                    if (count % 2 == 0) {
+                        $(".par-1").show();
+                        $(".par-2").css("margin", "-168px 0px 50px 900px");
+                        $(".par-2").css("border", "solid 3px  #00ffe1");
+
+                    }
+
+                    // $(".par-2").hide();
+                    // $(".par-2").css("margin","30px 0px 0px 900px");
+                })
+
+                $("#pragraph-button-1").click(function () {
+                    count1++;
+
+                    if (count1 % 2 == 1) {
+                        $(".par-1").css("margin", "30px 0px 50px 00px");
+                        $(".par-1").css("border", "solid 3px red");
+                        $(".par-2").hide();
+                    }
+
+                    if (count1 % 2 == 0) {
+                        $(".par-2").show();
+                        $(".par-1").css("margin", "30px 900px 50px 0px ");
+                        $(".par-1").css("border", "solid 3px #00ffe1");
+                    }
+                })
+
+            })
+
+
+
+
+        })
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+    <h1> Helllo</h1>
+    <section class="sec">
+        <button id="show">show</button>
+        <button id="hide">hide</button>
+        <button id="border-1">border</button>
+        <p>jquery is a light weight javascript</p>
+
+    </section>
+    <div class="img"> <img src="/photos/ph-3.png">
+    </div>
+    <div class="pragraph">
+        <p class="par-1"> If you need explanation on what is wrong with your code:
+            - you did a hide of your element on line 7
+            - you've put an onClick event but that was equal to a submit... which I think results in a page refresh
+            - you've cloned your element (hidden element), but you didn't append it to your html.
+
+            Regarding my code, you don't actually have to count the times a button is pressed so you can eliminate count
+        </p>
+
+
+        <p class="par-2"> jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML
+            document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use
+            API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery
+            has changed the way that millions of people write JavaScript.
+        </p>
+    </div>
+
+    <div class="pragraph-button">
+        <button id="pragraph-button-1">hide lorem1</button>
+        <button id="pragraph-button-2">hide lorem2</button>
+    </div>
+</body>
+
+</html>

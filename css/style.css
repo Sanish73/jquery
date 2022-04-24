@@ -1,0 +1,48 @@
+:root{
+    --primary-color:#00ffe1;
+}
+
+ection {
+    border-color: #00ffe1;
+    color: rebeccapurple;
+    border-style: ridge;
+    padding: 50px 50px;
+}
+
+img {
+    max-width: 50vw;
+    height: auto;
+
+    /* max-height: 50vh; */
+    display: flex;
+    /* align-content: center; */
+    /* justify-content: center; */
+    margin: auto;
+    border: 3px solid var(--primary-color);
+    
+}
+
+.par-1{
+    margin: 30px 900px 50px 0px ;
+    display: flex;
+    /* justify-content: left; */
+    background-color: rgb(199, 195, 195);
+    
+}
+
+.par-2{
+    margin: -168px 0px 50px 900px; 
+    display: flex;
+    background-color: rgb(182, 155, 127);
+}
+.pragraph p{
+    border:  solid 3px #00ffe1;
+    padding: 10px 10px;
+}
+
+.pragraph-button{
+    display: flex;
+    margin: auto;
+    background-color: #00ffe1;
+    justify-content: center;
+}
